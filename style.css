@@ -1,0 +1,13 @@
+
+*{
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+}
+
+.wrapper{
+    display: flex;
+    background: lightgray;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}

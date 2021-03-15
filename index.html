@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excuse Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/js" href="main.js">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+      <p id="excuse">My dog ate my homework</p> 
+    </div>
+
+    <script>
+        let who = ['The dog','My grandma','His turtle','My bird'];
+        let action = ['ate','peed','crushed','broke'];
+        let what = ['my homework', 'the keys', 'the car'];
+        let when = ['before the class','right on time','when I finished','during my lunch','while I was praying'];
+
+        function getRandom(array){
+            return array[Math.floor(Math.random()*array.length)];
+        }
+
+        function displayRandom(){
+            let sentence = "";
+            sentence+= getRandom(who)+" ";
+            sentence+= getRandom(action)+" ";
+            sentence+= getRandom(what)+" ";
+            sentence+= getRandom(when);
+
+            return sentence;
+        }
+        document.getElementById("excuse").innerHTML = displayRandom();
+    </script>
+</body>
+</html>
